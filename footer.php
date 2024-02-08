@@ -1,30 +1,32 @@
 <div class="inside-container join-us-section">
         <div class="row">
           <div class="col-1"></div>
-          <div class="col-10">
-            <p class="section-title" style="text-align:left;">Wanna get in touch with us?</p><br>
-            <a href="#"><i class="fab fa-facebook-f" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fab fa-twitter" style="font-size:48px;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" style="font-size:48px;"></i></a>
-          </div>
+          <div class="col" style="font-size:20px; text-align:left;">
+        
         </div>
-      </div>
+        </div>
+        </div>
 <footer class="footer">
-      
-        <div class="copyright">
-          <div class="inside-container">
-            <div class="row">
+  <div class="copyright">
+      <div class="inside-container">
+          <div class="row">
               <div class="col-md-6 order-2 order-md-12">
-                <p>&copy;  All Rights Reserved. Created by <a href="#" class="created-by">Anirudh</a></p>
+                  Address : Some address <br style="line-height: 150%;">
+                  Email : stephanieswish@example.com<br style="line-height: 150%;">
+                  Phone Number : +1234567890<br style="line-height: 150%;">
+                  Office timings : Some timings<br style="line-height: 150%;">
               </div>
-              <div class="col-md-6 social order-1 order-md-12">                
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <div class="col-md-6 social order-1 order-md-12">
+                  <a href="#" class="fa"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#" class="fa"><i class="fa-brands fa-square-x-twitter"></i></a>
+                  <a href="#" class="fa"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="#" class="fa"><i class="fa-brands fa-square-whatsapp"></i></a>
+                  <a href="#" class="fa"><i class="fa-solid fa-map-location-dot"></i></a>
               </div>
-            </div>
           </div>
-        </div>
-      </footer>
+      </div>
+  </div>
+</footer>
+
        
   

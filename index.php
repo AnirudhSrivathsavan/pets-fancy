@@ -13,8 +13,7 @@ if (!is_dir($folderPath)) {
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Free Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -65,9 +64,7 @@ if (!is_dir($folderPath)) {
       <?php
         include_once('header.php');
       ?>
-      
       <!--Class Yoga Center-->
-      <br><br><br><br>
       <div class="best-class-club">
         <div class="row best-class-sections-detail">
           <div class="col-lg-6 best-class-club-desc">

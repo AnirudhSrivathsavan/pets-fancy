@@ -11,24 +11,35 @@ require_once('config.php');
 $zipcode = $_POST['zipcode'];
 $service = $_POST['services'];
 $animalCategory = $_POST['animalCategory'];
-$query = "SELECT * FROM placedata WHERE `Zip code` = ?";
-$types = "i";
-$params = [&$zipcode];
+
+$query = "SELECT * FROM placedata 
+    WHERE 1";
+$types = "";
+$params = [];
 if ($service != "9") {
     $query .= " AND `Service` = ?";
     $types .= "s";
-    $params[] = &$service;  // Pass $service by reference
+    $params[] = &$service;
 }
 if ($animalCategory != "8") {
     $query .= " AND `Animal` = ?";
     $types .= "s";
-    $params[] = &$animalCategory;  // Pass $animalCategory by reference
+    $params[] = &$animalCategory;
 }
+$query .= " AND ABS(`Zip code` - ?) <= 30 ORDER BY ABS(`Zip code` - ?)";
+$types .= "ss";
+$params[] = &$zipcode;
+$params[] = &$zipcode;
 $stmt = $conn->prepare($query);
+if (!$stmt) {
+    echo '<h1>Error encountered.'.$conn->error.'</h1>';
+}
 $bindTypes = str_repeat("s", count($params));
 array_unshift($params, $bindTypes);
 call_user_func_array([$stmt, 'bind_param'], $params);
 $stmt->execute();
+
+
 
 
 
