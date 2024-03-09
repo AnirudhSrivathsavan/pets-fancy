@@ -44,9 +44,9 @@ if ($result->num_rows > 0) {
         echo '<td>' . $row['Verified'] . '</td>';
         
         // Add update and delete links
-        echo '<td><a href="code/update.php?id=' . $row['Id'] . '">Update</a> | ';
-        echo '<a href="code/delete.php?id=' . $row['Id'] . '" onclick="return confirm(\'Are you sure?\')">Delete</a></td>';
-        
+        echo '<td><a href="code/update.php?id=' . $row['Id'] . '">Update</a><br><hr>';
+        echo '<a href="code/delete.php?id=' . $row['Id'] . '" onclick="return confirm(\'Are you sure?\')">Delete</a><br><hr>';
+        echo '<a href="code/verify.php?id=' . $row['Id'] . '"onclick="return confirm(\'Are you sure?\')">Verify</a> </td>';
         echo '</tr>';
     }
 

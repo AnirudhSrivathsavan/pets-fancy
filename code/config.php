@@ -10,4 +10,3 @@ function redirect($url=''){
 	echo '<script>location.href="'.base_url .$url.'"</script>';
 }
 ob_end_flush();
-?>

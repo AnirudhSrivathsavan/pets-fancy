@@ -1,3 +1,16 @@
+<?php
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+        if (isset($_SESSION['toast_message'])) {
+            $toastMessage = $_SESSION['toast_message'];
+            echo '<script type="text/javascript">toastr.success('.$toastMessage.'); alert("here");</script>';
+            unset($_SESSION['toast_message']);
+        }
+    }
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +25,8 @@
 
        <?php  include 'code/display.php'; ?>
     </div>
-    <h2>Add New Animal</h2>
-    <form action="insert.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" name="name" required>
-        <!-- Add similar fields for other columns -->
 
-        <button type="submit">Add Animal</button>
-    </form>
 </body>
 </html>
+
+

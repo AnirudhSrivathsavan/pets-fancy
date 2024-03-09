@@ -2,23 +2,26 @@
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
 
-    <!--Stylesheet-->
-    <link rel="stylesheet" type="text/css" href="css/normailze.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+<!--Stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/normailze.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
-    <!--Font-->
-    <link rel="stylesheet" type="text/css" href="font/web-font.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
+<!--Font-->
+<link rel="stylesheet" type="text/css" href="font/web-font.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
 
 
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/31b4dd131e.js" crossorigin="anonymous"></script>
+<!-- Javascript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
-    <script>
+<script src="https://kit.fontawesome.com/31b4dd131e.js" crossorigin="anonymous"></script>
+
+<script>
 $(document).ready(function () {
     var banner = $('.banner');
     var minOpacity = 0.1;

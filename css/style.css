@@ -353,7 +353,7 @@ a {
 	height: 38px;
 	margin-bottom: 9px;
 	font-size: 12px;
-	line-height: 40px;
+	line-height: 45px;
 	letter-spacing: 0.48px;
 	pointer-events:all; 
 }
@@ -366,28 +366,10 @@ a {
 	border: 1px solid #999;
 	margin-bottom: 20px;
 	font-size: 12px;
-	line-height: 40px;
+	line-height: 45px;
 	letter-spacing: 0.48px;
 }
-.yoga-template .contact-section .appointment 
-.appointment-form .box-select::before {
-    content: "\f0dd";
-    font-family: "Font Awesome 5 Free";
-    position: absolute;
-    top: 40%;
-	pointer-events: none; 
-    right: -1.4%;
-    width: 35px;
-    height: 37px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 37px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(123, 108, 213);
-    font-weight: 600;
-    border-radius: 3px;
-    transform: translate(-50%, -50%);
-}
+
 .yoga-template .contact-section .appointment 
 .appointment-form .appointment-form-col-left {
 	padding-right: 7px;
@@ -566,7 +548,7 @@ a {
 
 .fa{
 	padding: 10px 5% ;
-	font-size: xxx-large;
+	font-size: xx-large;
 }
 
 .form-control{
