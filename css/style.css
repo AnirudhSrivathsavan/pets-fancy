@@ -62,108 +62,7 @@ a {
 	text-align: center;
 }
 /*Banner*/
-.yoga-template .banner {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-	background-image: url(../assets/temp-background.jpg);
-	background-repeat: no-repeat; 
-	background-size: cover;
-	background-position: center center;
-	width: 100%;
-	height: 20vh;
-	color:#fff;
-    position: fixed;
-	top: 0px;
-    left: 0px;
-	z-index: 6;
-}
 
-.yoga-template .banner .logo-img{
-	height:max-content;
-}
-.yoga-template .banner .banner-overlay {
-	position: absolute;
-	top: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
-    background-color: rgba(0, 0, 0, 0.29);
-    z-index: 2;
-}
-.yoga-template .banner .top-bar{
-	
-	border-bottom: 1px solid #fff;
-}
-.yoga-template .banner .top-bar-left ,
-.top-bar-right {
-	z-index: 3;
-}
-.yoga-template .banner .top-bar-left a {
-	color:#fff;
-	font: size 24px;;
-	letter-spacing: 0.18px;
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 700;
-	vertical-align: middle;
-}
-.yoga-template .banner .logo {
-	text-align: center;
-	z-index: 3;
-}
-.yoga-template .banner .top-bar-right {
-	text-align: right;
-}
-.yoga-template .banner .top-bar-right a {
-	font-family: 'Open Sans', sans-serif;
-	color:#fff;
-	font-size: 16px;
-	letter-spacing: 0.18px;
-	font-weight: 900;
-	vertical-align: middle;
-	border-radius: 5px;
-}
-
-.yoga-template .banner .top-bar-right a:hover{
-	color:#ff4e4e;
-	background-color: #7b6cd5;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	text-decoration: underline;
-}
-.yoga-template .banner .top-bar-left i,
-.top-bar-right i {
-	font-size: 16px;
-    background-color: #fff;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    text-align: center;
-    color: #3e2d40;
-    vertical-align: middle;
-    padding-top: 5px;
-}
-
-
-.yoga-template a.banner-btn-b {
-	font-family: 'Josefin Sans-Bold', sans-serif;
-	font-size: 20px;
-	line-height: 25px;
-	letter-spacing: 0.6px;
-	background-color:#c77;
-	padding: 1vh;
-	color:#fff;
-	border-radius: 3px;
-	text-transform: uppercase;
-}
-.yoga-template a.banner-btn-b:hover {
-	text-decoration: none;
-	background-color: #e6e5ea;
-	animation-duration: 1000ms;
-}
-/* .yoga-template .banner .banner-content a.banner-btn:hover {
-	text-decoration: none;
-	color: #7b6cd5;
-} */
 /*Service*/
 
 .yoga-template .service-section .service-detail {
@@ -350,10 +249,10 @@ a {
 .yoga-template .contact-section .appointment 
 .appointment-form  .appointment-form-input {
 	border: 1px solid #999;
-	height: 38px;
+	height: 50px;
 	margin-bottom: 9px;
-	font-size: 12px;
-	line-height: 45px;
+	font-size: 10px;
+	line-height: 70px;
 	letter-spacing: 0.48px;
 	pointer-events:all; 
 }
@@ -370,15 +269,8 @@ a {
 	letter-spacing: 0.48px;
 }
 
-.yoga-template .contact-section .appointment 
-.appointment-form .appointment-form-col-left {
-	padding-right: 7px;
-	margin-top: 10px;
-}
-.yoga-template .contact-section .appointment 
-.appointment-form .appointment-form-col-right {
-	padding-left: 7px;
-    padding-right: 7px;
+.yoga-template .contact-section .appointment  .appointment-form select{
+	height: 3rem;
 }
 
 .yoga-template .contact-section .appointment 
@@ -547,11 +439,18 @@ a {
 }
 
 .fa{
-	padding: 10px 5% ;
-	font-size: xx-large;
+	padding: 10px 2% ;
+	font-size: 3rem;
+}
+
+.fa .map{
+	position: relative;
+	top: -5px;
+	font-size: 2.7rem;
 }
 
 .form-control{
 	padding: 10px;
 	margin: 10px;
-} 
+}  
+

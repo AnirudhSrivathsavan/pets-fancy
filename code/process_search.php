@@ -1,5 +1,7 @@
 <?php
 require_once('config.php'); 
+
+
 // $zipcode = $_POST['zipcode'];
 // $service = $_POST['services'];
 // $animalCategory = $_POST['animalCategory'];
@@ -8,7 +10,8 @@ require_once('config.php');
 // $stmt->bind_param("isi", $zipcode, $service, $animalCategory);
 // $stmt->execute();
 
-$zipcode = $_POST['zipcode'];
+$state = $_POST['state'];
+$city = $_POST['city'];
 $service = $_POST['services'];
 $animalCategory = $_POST['animalCategory'];
 
@@ -26,10 +29,10 @@ if ($animalCategory != "8") {
     $types .= "s";
     $params[] = &$animalCategory;
 }
-$query .= " AND ABS(`Zip code` - ?) <= 30 ORDER BY ABS(`Zip code` - ?)";
+$query .= " AND (`city` = ?)  AND (`State` = ?) AND (`Verified` = 1)";
 $types .= "ss";
-$params[] = &$zipcode;
-$params[] = &$zipcode;
+$params[] = &$city;
+$params[] = &$state;
 $stmt = $conn->prepare($query);
 if (!$stmt) {
     echo '<h1>Error encountered.'.$conn->error.'</h1>';
@@ -64,7 +67,7 @@ echo '<hr><div class="row">
 <div class="col-lg-7"><em>'.$result['Byline'].'</em></div>
 <div class="col-lg-7"><img src="assets\telephone.svg" height = "20"> <a href="tel:' . $result['Phone'] .'"> 1234567890</a></div>
 <div class="col-lg-7"><img src="assets\geo-fill.svg" height = "20">' . nl2br($result['Address']) . '</div>
-<div class="col-lg-7">' . $result['State'] . ', ' . $result['Zip code'] . '</div>
+<div class="col-lg-7">'. $result['City'] . ', ' . $result['State'] . ', ' . $result['Zip code'] . '</div>
 <div class="col-lg-1"></div><div class="col"><img src="assets\clock-fill.svg" height = "20">' . nl2br($result['Avail']) . '</div>
 </div>
 <div class="col-lg-2">
@@ -72,4 +75,4 @@ echo '<hr><div class="row">
 </div>
 </div>';
 }}
-?>
+

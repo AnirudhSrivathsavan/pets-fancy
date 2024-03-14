@@ -1,39 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-grid.css">
-
-    <!--Stylesheet-->
-    <link rel="stylesheet" type="text/css" href="css/normailze.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-    <!--Font-->
-    <link rel="stylesheet" type="text/css" href="font/web-font.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-
-
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://kit.fontawesome.com/31b4dd131e.js" crossorigin="anonymous"></script>
-    <style>
-        body{
-          padding-top: 15vh;
-        }
-    </style>
     <title>Stefanie's Wish</title>
   </head>
   <body>
     <div class="main-container yoga-template">
       <!--Banner section-->
       <?php
-        include_once('header.php');
+        include_once('code/includes/header.php');
       ?>
       
       
@@ -47,7 +22,7 @@
             <div class="row sections-detail">
           <div class="col-12">
             <h2 class="section-title">ADD SERVICE</h2>
-            <p class="section-title-desc">Are you a vet, breeder, or pet supplier and want to add your service to our database?</p>
+            <p class="section-title-desc">Are you a vet, breeder, or pet supplier and want to add your service to our database so that people can reach you?</p>
           </div>
         </div>
                <form class="appointment-form" ction="addservice.php" id="myform" method="post" enctype="multipart/form-data" autocomplete="off">
@@ -67,58 +42,18 @@
                     <div class="col-lg-2" style="visibility : hidden;"></div>
                     <div class="col-lg-2" style="visibility : hidden;"></div>
                     <div class="col-lg-8 box-select appointment-form-col-left">
-                      <select name="state" id="state" required class="form-control " >
+                      <select id="state_dropdown" name="state" id="state" required class="form-control " >
                       <option value="" disabled selected>Select a state</option>
-                                <option value="Alabama">Alabama</option>
-                                <option value="Alaska">Alaska</option>
-                                <option value="Arizona">Arizona</option>
-                                <option value="Arkansas">Arkansas</option>
-                                <option value="California">California</option>
-                                <option value="Colorado">Colorado</option>
-                                <option value="Connecticut">Connecticut</option>
-                                <option value="Delaware">Delaware</option>
-                                <option value="Florida">Florida</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Hawaii">Hawaii</option>
-                                <option value="Idaho">Idaho</option>
-                                <option value="Illinois">Illinois</option>
-                                <option value="Indiana">Indiana</option>
-                                <option value="Iowa">Iowa</option>
-                                <option value="Kansas">Kansas</option>
-                                <option value="Kentucky">Kentucky</option>
-                                <option value="Louisiana">Louisiana</option>
-                                <option value="Maine">Maine</option>
-                                <option value="Maryland">Maryland</option>
-                                <option value="Massachusetts">Massachusetts</option>
-                                <option value="Michigan">Michigan</option>
-                                <option value="Minnesota">Minnesota</option>
-                                <option value="Mississippi">Mississippi</option>
-                                <option value="Missouri">Missouri</option>
-                                <option value="Montana">Montana</option>
-                                <option value="Nebraska">Nebraska</option>
-                                <option value="Nevada">Nevada</option>
-                                <option value="New Hampshire">New Hampshire</option>
-                                <option value="New Jersey">New Jersey</option>
-                                <option value="New Mexico">New Mexico</option>
-                                <option value="New York">New York</option>
-                                <option value="North Carolina">North Carolina</option>
-                                <option value="North Dakota">North Dakota</option>
-                                <option value="Ohio">Ohio</option>
-                                <option value="Oklahoma">Oklahoma</option>
-                                <option value="Oregon">Oregon</option>
-                                <option value="Pennsylvania">Pennsylvania</option>
-                                <option value="Rhode Island">Rhode Island</option>
-                                <option value="South Carolina">South Carolina</option>
-                                <option value="South Dakota">South Dakota</option>
-                                <option value="Tennessee">Tennessee</option>
-                                <option value="Texas">Texas</option>
-                                <option value="Utah">Utah</option>
-                                <option value="Vermont">Vermont</option>
-                                <option value="Virginia">Virginia</option>
-                                <option value="Washington">Washington</option>
-                                <option value="West Virginia">West Virginia</option>
-                                <option value="Wisconsin">Wisconsin</option>
-                                <option value="Wyoming">Wyoming</option>
+                                
+                      </select> 
+                     </div>
+                     <div class="col-lg-2" style="visibility : hidden;"></div>
+
+                     <div class="col-lg-2" style="visibility : hidden;"></div>
+                    <div class="col-lg-8 box-select appointment-form-col-left">
+                      <select id="city_dropdown" name="city" id="city" required class="form-control " >
+                      <option value="" disabled selected>Select a City</option>
+                                
                       </select> 
                      </div>
                      <div class="col-lg-2" style="visibility : hidden;"></div>
@@ -146,9 +81,11 @@
                     <div class="col-lg-2" style="visibility : hidden;"></div>
                     <div class="col-lg-8">                              
                     <div class="mb-3">
-                    <label for="image" class="form-label">Select an image of your business, logo, etc.</label>
+                    <label for="image" class="form-label formFile">Select an image of your business, logo, etc.</label>
                       <input type="file" id="image" name="image" accept="image/*" class="form-control" required="">
                     </div>
+                    <div id="imagePreview"></div>
+                    
                     </div>
                     <div class="col-lg-2" style="visibility : hidden;"></div>
 
@@ -213,7 +150,7 @@
       
 
       <?php
-      include_once('footer.php');
+      include_once('code/includes/footer.php');
       ?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -232,6 +169,7 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $name = $_POST["name"];
                 $address = $_POST["address"];
+                $city = $_POST["city"];
                 $state = $_POST["state"];
                 $zipcode = $_POST["zipcode"];
                 $byline = $_POST["byline"];
@@ -245,9 +183,9 @@
                 $service = $_POST["service"];
                 $animal = $_POST["animal"];
                 $imgpath = "images/" . $uniqueFilename;
-                $sql = "INSERT INTO placedata (Name, Address, State, `Zip code`, Byline, Phone, imgpath, Avail, Service, Animal, Verified) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
+                $sql = "INSERT INTO placedata (Name, Address, City,  State, `Zip code`, Byline, Phone, imgpath, Avail, Service, Animal, Verified) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sssissssii", $name, $address, $state, $zipcode, $byline, $phone, $imgpath, $avail, $service, $animal);
+                $stmt->bind_param("ssssissssii", $name, $address, $city, $state, $zipcode, $byline, $phone, $imgpath, $avail, $service, $animal);
                 if ($stmt->execute()) {
                     echo "<script>alert('Service has been edited and will be visible after verification')</script>";
                     redirect("");
@@ -258,3 +196,29 @@
             }
         }
     ?>
+
+    <script>
+      document.getElementById('image').addEventListener('change', function(event) {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+
+  reader.onload = function(event) {
+    var imgElement = document.createElement('img');
+    imgElement.src = event.target.result;
+    imgElement.classList.add('preview-image');
+    document.getElementById('imagePreview').innerHTML = '';
+    document.getElementById('imagePreview').appendChild(imgElement);
+  };
+
+  reader.readAsDataURL(file);
+});
+    </script>
+
+    
+<style>
+
+  #imagePreview .preview-image {
+    width: 200px;
+    height: 200px;
+  }
+</style>
