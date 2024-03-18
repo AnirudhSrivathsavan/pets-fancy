@@ -56,7 +56,7 @@
     <div class="error-message">
       The page you are looking for dows not exist. Please recheck your URL.
     </div>
-    <a href="./.." class="back-home-link">Back to Homepage</a>
+    <a href="index" class="back-home-link">Back to Homepage</a>
   </div>
 </div></div>
 </body>

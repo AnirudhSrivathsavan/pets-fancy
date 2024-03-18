@@ -3,4 +3,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [NC,L] 
 Options -Indexes
-ErrorDocument 404 /pets-fancy/404.php
+ErrorDocument 404 /pets-fancy/404redirect.php

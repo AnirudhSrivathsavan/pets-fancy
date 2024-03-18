@@ -52,10 +52,7 @@ if(isset($_SESSION['user']))
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
 
 
-<!-- Javascript -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
 
 <script src="https://kit.fontawesome.com/31b4dd131e.js" crossorigin="anonymous"></script>
 
@@ -64,7 +61,6 @@ if(isset($_SESSION['user']))
 
 <div class="banner">
     <div class="fluid-container">
-
         <div class="row">
             <div class="col-md  d-none d-md-block">
                 <img class="bannerimg" src="assets\logo-icon-removebg-preview.png">
@@ -83,18 +79,18 @@ if(isset($_SESSION['user']))
 
 <style>
     .banner {
-        padding: 0.5rem 1rem;
+        padding: 2rem 2rem;
         background-image: url('assets/temp-background.jpg');
         background-size: cover;
         background-position: center;
         color: #fff;
+        background-blend-mode: lighten;
     }
 
     .banner .bannerimg{
         height: 7rem;
         padding-right: 2rem;
     }
-
     
     .banner .bannerimg-mobile{
         max-width: 90%;

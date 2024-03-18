@@ -7,11 +7,9 @@
     margin: 0;padding: 0;
 }
 
-.body {
+body {
   background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
   font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;    
   height: 100%;
   width: 100%;  
 }
